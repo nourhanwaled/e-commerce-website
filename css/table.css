@@ -1,0 +1,432 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    height: 200px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+   
+}
+/*start setting box*/
+.setting-box{
+    position: fixed;
+    top: 0px;
+    left: -200px;
+    background-color: rgba(1, 1, 1, 0.8);
+    width: 280px;
+    z-index: 1000;
+    min-height: 100vh;
+    transition: .3s;
+    border: 1px solid rgba(1, 1, 1, .8);
+}
+.setting-box:hover{
+    left: 0px;
+}
+.setting-container{
+    margin-top: 20px;
+   margin-left: 13px;
+   margin-bottom: 20px;
+}
+
+.setting-container .option-box ul{
+    text-align: center;
+    list-style: none;
+    padding: 0px;
+    margin: 10px 0px 0px;
+}
+
+.setting-container{
+    margin-top: 10px;
+   margin-left: 20px;
+   margin-bottom: 20px;
+}
+.setting-container img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    margin-left: -40px;
+}
+.setting-container .team{
+    color: white;
+    font-family: 'lobster';
+    font-size: 20px;
+    margin-left: 15px;
+    position: absolute;
+    top: 3%;
+}
+.setting-container .project{
+    margin-left: -2px;
+}
+.setting-container i{
+    color: white;
+    font-size: 30px;
+    float: right;
+    margin-right: 28px;
+}
+.setting-container input{
+    width: 60%;
+    border: none;
+    padding: 3px 10px;
+    display: block;
+    margin-left: 5px;
+}
+.header h1{
+    text-align: center;
+    position: absolute;
+    font-size: 50px;
+    top: 15%;
+    left: 40%;
+    font-family: 'lobster';
+    color: white;
+    text-shadow: 5px 5px 5px pink;
+}
+.setting-container li{
+    list-style: none;
+    margin-top: 50px;
+    margin-left: 0px;
+    font-size: 20px;
+}
+.setting-container li a{
+    text-decoration: none;
+    color: white;
+    padding-top: 40px;
+}
+.setting-container li a:hover{
+    color: deeppink;
+}
+ 
+/*end setting box*/
+/*.........................................................*/
+
+/*start landing page*/
+.landing .overlay{
+   /* background-color: rgba(0,0,0,.6);*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+.landing .container{
+    position: relative;
+    z-index: 10000;
+}
+.header{
+    position: relative;
+    z-index: 2;
+    color: pink;
+    background-color:rgba(1,1,1,0.8);
+    padding: 10px;
+    display: flex;
+}
+.header .logo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 70px;
+    margin-left: 25px;
+    margin-top: 10px;  
+}
+/*.........................*/
+.header .links-container{
+    width: 100%;
+}
+.header .links-container .links{
+/*display: flex;*/
+padding: 20px;
+list-style: none;
+}
+.header .links-container .links li{
+    margin-top:8px;
+    display: inline;
+}
+.header .links-container .links li .fa-user-alt{
+    margin-left: 230px;
+    font-size: 25px;
+    margin-top: 3px;
+    color: white;
+}
+.header .links-container .links li .fa-shopping-cart{
+  margin-left: 50px;
+  font-size: 25px;
+  margin-top: 3px;
+  color: white;
+}
+.header .links-container .links li .fa-search-location{
+    font-size: 25px;
+    margin-top: 3px;
+    color: white;
+    margin-left: 40px;  
+}
+.header .links-container .links li .fa-user-alt:hover,.myul li .fa-search-location:hover,.myul li .fa-shopping-cart:hover{
+    color: deeppink;
+    cursor: pointer;
+}
+.header .links-container{
+    text-align: right;
+}
+.header .links-container .links li a{
+    color: white;
+    font-size: 18px;
+    padding-right: 30px;
+    text-decoration: none;
+}
+.header .links-container .links li a:hover{
+    color: deeppink;
+}
+.setting-container ul li i:hover{
+    color: deeppink;
+}
+/*..............................................*/
+
+
+/*end landing page*/
+@media(max-width:1300px){
+    .header .links li a{
+        display: none;
+   }
+   .overlayform{
+    position: fixed;
+    z-index: 2000;
+    right: 40%;
+    width: 450px;
+    top: 13.8%;
+    height: 450px;
+    background-color:rgba(1,1,1,0.8);
+    display: none;
+}
+@media(max-width:1350px) {
+    .overlayform{
+        position: fixed;
+        z-index: 2000;
+        left: 0%;
+        width:100%;
+        top: 13.8%;
+        height: 450px;
+        background-color:rgba(1,1,1,0.8);
+        display: none;
+}
+}
+.overlayform img{
+    width: 400px;
+    margin-top: 85px;
+    height: 250px;
+    margin-left: 20px;
+}
+}
+@media(max-width:900px){
+    .overlayform img{
+        width: 300px;
+        margin-top: 85px;
+        height: 250px;
+        margin-left: 20px;
+    }
+}
+@media(max-width:1000px){
+    .overlayform img{
+        width: 360px;
+        margin-top: 85px;
+        height: 250px;
+        margin-left: 20px;
+    }
+}
+@media(max-width:768px){
+    .header .links li a{
+        display: none;
+   }
+   .header .links{
+margin-left: -150px;
+   }
+   .overlayform img{
+    width: 200px;
+    margin-top: 85px;
+    height: 250px;
+    margin-left: 20px;
+}
+   
+}
+/*...................**...........................*/
+/*---------------tables--------------------------*/
+.starttable{
+    position: relative;
+    display: flex;
+    margin-left: 100px;
+    margin-top: 50px;
+    padding: 10px;
+}
+.starttable .breadcrumb{
+    position: absolute;
+    right: 30px;
+    top: 0;
+    background-color: white;
+}
+.fritable{
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+
+}
+.fritable .BBasictable p{
+color: grey;
+margin-top: 17px;
+}
+.fritable .BBasictable p .ttablle{
+    color: hotpink;
+}
+.fritable .table tbody td p{
+     width: fit-content;
+     padding: 4px;
+}
+.secondtable{
+    margin-top: 22px;
+    margin-left: 20px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+}
+.secondtable .BBasictable p{
+    color: grey;
+    margin-top: 17px;
+    }
+    .secondtable .BBasictable p .ttablle{
+        color: hotpink;
+    }
+    .secondtable tbody tr:hover{
+        background-color: rgb(202, 194, 194);
+    }
+    .secondtable .table tbody td p{
+        width: fit-content;
+        padding: 4px;
+   }
+   .secondtable .table tbody td .Defr{
+       color: teal;
+   }
+   .secondtable .table tbody td .SAME{
+       color: palevioletred;
+   }
+   @media (max-width:767px){
+    .fristtables{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+   }
+   @media (max-width:1000px){
+    .fristtables{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .fritable{
+        margin-top: 20px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+        width: 90%;
+    
+    }
+    .secondtable{
+        margin-top: 22px;
+        margin-left: 20px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+        width: 90%;
+    }
+   }
+   /*----------------section 2 in tables page-------------------------*/
+   .secondSSECtion {
+       margin-top: 50px;
+       background-color: white;
+       padding: 10px;
+       border-radius: 10px;
+   }
+   .secondSSECtion .BBasictable p .ttablle{
+    color: hotpink;
+   }
+   .secondSSECtion .BBasictable p{
+    margin-top: 17px;
+  }
+  .secondSSECtion .table tbody img{
+      width:50px;
+      height:50px;
+      border-radius: 50%;
+  }
+  .secondSSECtion .table tbody td{
+      padding: 10px;
+  }
+  .secondSSECtion .table tbody td .progress{
+      width: 100%;
+      height:7px;
+      margin-top: 10px;
+  }
+  /*---------------------sectio 3--------------------*/
+  .THIRDsection{
+    margin-top: 50px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.THIRDsection .BBasictable p .ttablle{
+ color: hotpink;
+}
+.THIRDsection .BBasictable p{
+ margin-top: 17px;
+}
+.THIRDsection .table tbody td{
+   padding: 10px;
+   border-color: rgb(197, 190, 190);
+}
+.THIRDsection .table tbody th{
+    padding: 10px ;
+ }
+.THIRDsection .table tbody th,thead th{
+    border-color:rgb(197, 190, 190)
+ }
+.THIRDsection .table tbody td .progress{
+   width: 100%;
+   height:7px;
+   margin-top: 10px;
+}
+/*----------------section 4-------------------------------*/
+.FOURTHsection{
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:white;
+}
+.FOURTHsection .BBasictable p .ttablle{
+    color: hotpink;
+   }
+   .FOURTHsection .BBasictable p{
+    margin-top: 17px;
+   }
+   /*-----------------section 5-------------------*/
+   .FIVTHsection{
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+   }
+   .FIVTHsection .BBasictable p .ttablle{
+    color: hotpink;
+   }
+   .FIVTHsection .BBasictable p{
+    margin-top: 17px;
+   }
+   .FIVTHsection .table tbody td {
+    padding: 10px;
+    border-color: rgb(197, 190, 190);
+ }
+ .FIVTHsection .table tbody th{
+     padding: 10px ;
+  }
+  .FIVTHsection .table tbody th{
+     border-color:rgb(197, 190, 190)
+  }

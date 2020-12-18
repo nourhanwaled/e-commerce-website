@@ -1,0 +1,740 @@
+:root{
+    --main-color:tomato;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    height: 200px;
+    overflow-x: hidden;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*start setting box*/
+.setting-box{
+    position: fixed;
+    top: 0px;
+    left: -200px;
+    background-color: white;
+    width: 200px;
+    z-index: 1000;
+    min-height: 100vh;
+    transition: .3s;
+    border: 1px solid #EEE;
+}
+.setting-box.open{
+left: 0px;
+}
+.setting-box .toggle{
+    position: absolute;
+    right: -30px;
+    top: 100px;
+    background-color: white;
+    padding: 8px 0px;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.setting-container{
+    margin-top: 20px;
+   margin-left: 13px;
+   margin-bottom: 20px;
+}
+.setting-container .option-box{
+    text-align: center;
+    background-color: #EEE;
+    width: 160px;
+    margin: 10px;
+
+
+}
+.setting-container .option-box h4{
+    color: #666;
+    font-size: 13px;
+}
+.setting-container .option-box .yes,.setting-container .option-box .no{
+    width: 50px;
+    background-color:var(--main-color);
+    color: white;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    opacity: .5;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.setting-box .option-box span.active{
+    opacity: 1;
+}
+.setting-container .option-box ul{
+    text-align: center;
+    list-style: none;
+    padding: 0px;
+    margin: 10px 0px 0px;
+}
+.setting-container .option-box ul li{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #333;
+    cursor: pointer;
+    opacity: .5;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border: 3px solid #EEE;
+}
+.setting-container .option-box ul li.active{
+    opacity: 1;
+    border-color: white;
+}
+.setting-container .option-box ul li:nth-child(1){
+    background-color: tomato;
+}
+.setting-container .option-box ul li:nth-child(2){
+    background-color: aqua;
+}
+.setting-container .option-box ul li:nth-child(3){
+    background-color: yellow;
+}
+.setting-container .option-box ul li:nth-child(4){
+    background-color: crimson;
+}
+.setting-container .option-box ul li:nth-child(5){
+    background-color: blue;
+}
+.setting-box .reset-option{
+    background-color: #f4433f;
+    border: none;
+    width: 160px;
+    margin: 10px auto;
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+/*end setting box*/
+/*.........................................................*/
+.landing{
+    min-height: 100vh;
+    background-image: url('../images/mab2.jpg');
+    background-size: cover;
+    position: relative;
+    margin-bottom: 100px;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 01s ease-in-out;
+    background-position: center;
+    background-attachment: fixed;
+    background-size:1600px 740px;
+    background-repeat: no-repeat;
+}
+.overlay{
+    background-color: rgba(0,0,0,.5);
+}
+.landing .overlay{
+   /* background-color: rgba(0,0,0,.6);*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+.landing .container{
+    position: relative;
+    z-index: 10000;
+}
+.header{
+    position: relative;
+    z-index: 2;
+    color: pink;
+    background-color:rgba(1,1,1,0.8);
+    padding: 10px;
+    display: flex;
+    height: 90px;
+}
+.header .logo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 70px;
+    margin-left: 25px;
+    margin-top: 2px;  
+}
+/*.........................*/
+.header .links-container{
+    width: 70%;
+    margin: auto;
+}
+.header .links-container .links{
+/*display: flex;*/
+padding: 20px;
+list-style: none;
+text-align: left;
+width: 100%;
+display: inline-flex;
+}
+.header .links-container .links li {
+    display: inline;
+    text-align: center;
+}
+.header .links-container .links li a{
+    padding-left: 20px;
+}
+.drobdown ul{
+    margin-top: 33.8px;
+    margin-left: -15px;
+    text-align: center;
+}
+.drobdown ul li a{
+    display: none;
+    padding-bottom: 20px;
+}
+.myul .links li:hover .drobdown li a{
+    display: block;
+    padding-bottom: 20px;
+}
+/*
+.header .links-container .links li .fa-user-alt{
+    margin-left: 150px;
+    font-size: 25px;
+    margin-top: 3px;
+    color: white;
+}*/
+.header .fa-shopping-cart{
+  font-size: 25px;
+  float: right;
+  color: white;
+  margin-top: 0px;
+position: absolute;
+top: 30%;
+right: 10%;
+}
+.header .links-container{
+    text-align: right;
+}
+.header .links-container .links li a{
+    color: white;
+    font-size: 18px;
+    padding-right: 30px;
+    text-decoration: none;
+}
+.header .links-container .links li a:hover{
+    color: deeppink;
+}
+/*.........logout..........*/
+.header .logout{
+    width: 100px;
+    background-color: white;
+    padding: 2px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 30%;
+    right: 2%;
+}
+.header .logout:hover{
+    width: 100px;
+}
+.header .logout a{
+    color: rgba(0,0,0,0.8);
+ text-decoration: none;
+}
+.header .logout a:hover{
+    text-decoration: none;
+    color: pink;
+}
+/*...........**...........*/
+/*..............................................*/
+.header{
+    position: relative;
+}
+.header .toogle-menu{
+    background: none;
+    right: 15%;
+    border: none;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+    position: relative;
+    position: absolute;
+    top: 40%;
+}
+.header .toogle-menu.menu-active::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    position: absolute;
+    bottom: -16px;
+    left: 10px;
+    border-color: transparent transparent white transparent;
+}
+.header .toogle-menu:focus{
+    outline: none;
+}
+.header .toogle-menu span{
+    display: block;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 4px;
+}
+
+.intro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+    width: 95%;
+}
+.intro h1{
+    font-size: 34px;
+    margin: 0px 0px 12px;
+}
+.intro h1 span{
+color: var(--main-color);
+}
+
+.intro p{
+    line-height: 1.6;
+    font-size: 20px;
+    margin: 0px;
+}
+@media(min-width:1100px){
+    .drobdown ul{
+        margin-top: 33.8px;
+        margin-left: -15px;
+        text-align: center;
+        background-color: rgba(0,0,0,0.8);
+    }
+}
+@media(max-width:1100px){
+    .header .fa-shopping-cart{
+        float: right;
+        margin-right: 90px;
+        font-size: 20px;
+        color: white;
+        position: absolute;
+        right:5%;
+        top: 40%;
+    }
+    .header .links-container .links li a{
+        display: none;
+    }
+    .fa-caret-square-down{
+        display: none;
+    }
+    .header .links-container .links i{
+        display: none;
+    }
+    .drobdown ul li a{
+        display: none;
+      /* background-color: white;*/
+        padding-bottom: 20px;
+    }
+
+    .drobdown ul{
+        margin-top: 0px;
+    }
+    .header ul li{
+        display: block;
+        text-align: center;
+    }
+    .header ul .links.open{
+        display: block;
+        background-color: rgba(1, 1, 1, .8);
+        position: absolute;
+        padding: 20px;
+        left: 0;
+        top: 85px;
+        width: 100%;
+        border-radius: 4px;
+        z-index: 100000;
+    }
+    
+    .header ul .links.open li a{ 
+       color: white;
+        font-weight: bold;
+        display: block;
+        padding-bottom: 20px;
+        z-index: 100;
+    }
+    .header .toogle-menu{
+        display:inline-block;
+    }
+}
+   @media(max-width:1150px){
+    .header .toogle-menu{
+        position: absolute;
+        right: 20%;
+    }
+}
+@media(max-width:1000px){
+    .header .toogle-menu{
+         position :absolute;
+        right: 22%;
+    }
+}
+    @media(max-width:775px){
+        .header .toogle-menu{
+             position :absolute;
+            right: 26%;
+        }
+    }
+        @media(max-width:557px){
+            .header .toogle-menu{
+                 position: absolute;
+                right: 30%;
+            }
+}
+/*end landing page*/
+  .aboutus .aboutleft h2{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.aboutus .aboutleft p{
+   color: #888;
+   font-size: 21px;
+   line-height: 140%;
+}.aboutus .aboutleft i{
+   color: rgb(13,133,202);
+   font-size: 35px;
+   margin-bottom: 20px;
+}
+.aboutus .aboutleft h4{
+   color: #888;
+   font-size: 20px;
+   margin-bottom: 10px;
+}
+.aboutus .aboutleft .ppp{
+   color:#888;
+   font-size: 18px;
+   line-height: 140%;
+   margin-bottom: 20px;
+}
+.aboutus .aboutleft a{
+   text-decoration: none;
+   color: rgb(13,133,202);
+   font-size: 18px;
+}
+.aboutus .aboutright img{
+margin-top: 20px ;
+   width: 100%;
+   height: 500px;
+}/*our team section*/
+.ourteam h2{
+   text-align: center;
+   font-size: 70px;
+}
+.ourteam img{
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   margin-bottom: 40px;
+}
+.ourteam .col-4{
+   text-align: center;
+   margin-top: 50px;
+   margin-right: 50px;
+}
+.ourteam cite{
+   display: block;
+text-align: center;
+font-size: 20px;
+color: #555;
+margin-bottom: 20px;
+}
+.ourteam p{
+   font-size: 18px;
+   color: #888;
+   text-align: justify;
+}
+.ourteam .teamsocial{
+   margin-top: 40px;
+}
+.ourteam .teamsocial ul {
+   list-style: none;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+}
+.ourteam .teamsocial ul li {
+   margin-right: 20px;
+}
+.ourteam .teamsocial ul li a{
+color: #888;
+
+}
+.ourteam .teamsocial ul li a i{
+   font-size: 28px;
+}
+
+
+/* contact section*/
+
+.rrow{
+    
+    display: flex;
+    
+
+}.big-aboutt{
+    display: flex;
+    justify-content: space-between;
+    
+    width: 100%;
+}
+@media(max-width:992px){
+    .big-aboutt{
+        display: block;
+        
+    }
+    .big-aboutt .ccontact{
+        display: block;
+        width: 80%;
+    }
+    .ccontact input[type=text]{
+        width: 100%;
+    }
+    .ccontact input[type=submit]{
+        margin-left: 50px;
+    }
+    
+    .big-aboutt .locact{
+        margin: auto;
+        
+    padding: 50px 100px;
+    
+    }
+}
+@media(max-width:1200px){
+    .locact{
+        margin-left: 20px;
+    }
+}
+
+.ccontact{
+    display: flex;
+width: 200%;
+}
+.ccontact .cform{
+   background-color: white;
+   padding: 40px 40px 100px 40px;
+   margin-left: 60px;
+   margin-bottom: 100px;
+   position: relative;
+   width: 190%;
+
+}
+label{
+   display: block;
+   margin-bottom: 8px;
+   color:#444;
+   font-size: 18px;
+   
+}
+.ccontact .fal{
+   display: flex;
+}
+input[type=text],input[type=email],textarea{
+   display: block;
+   margin-bottom: 20px;
+   width: 100%;
+   padding: 10px 20px;
+   border-radius: 5px;
+   border: 1px solid #888;
+}input:focus{
+   border: 1px solid hotpink;
+   outline: none;
+}
+.ccontact h3{
+   font-size: 26px;
+   margin-bottom: 40px;
+   margin-top: 10px;
+   font-weight: 700;
+}/*
+input[type=submit]{
+   position: absolute;
+   top: 93%;
+   left: 18%;
+   transform: translate(-50%,-50%);
+   padding: 15px 30px;
+   background-color: hotpink;
+   color: white;
+   border-radius: 5px;
+   border: none;
+   cursor: pointer;
+   margin-top: 20px;
+}*/
+input[type=submit]:hover{
+    background-color:gray ;
+    color: white;
+}
+
+textarea{
+   outline: none;
+
+}/* start of locact*/
+.locact{
+margin-left: -90px;
+    width: 100%;
+    box-sizing: border-box;
+ /*  position: absolute;
+   top: 790px;
+   left: 800px;*/
+
+}
+  #div7{
+      
+    
+      display: block;
+      margin-bottom: 20px;
+  }
+  
+  #div7 i{
+      display: block;
+      padding-top: 40px;
+      font-size: 24px;
+      color: gray;
+      
+  }
+  #div7 i span{
+      color: gray;
+      margin-left: 20px;
+  }
+  #h23{
+      font-size: 25px;
+      font-weight: 700;
+      margin-top: 30px;
+  }
+/*end of locact*/
+
+/*start of location*/
+.subscribe{
+clear: both;
+height: 400px;
+margin-bottom: 50px;
+margin: auto;
+text-align: center;
+}
+@media(max-width:786px){
+    .subscribe {
+height: 500px;
+
+    }
+}
+.subscribe h2{
+    color: white;
+    text-align: center;
+    font-size: 37px;
+    font-weight: 800;
+    padding-top: 100px;
+}
+
+.subscribe p{
+    text-align: center;
+    color: gray;
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+.subscribe input[type=text]{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 20px;
+    border-radius: 5px;
+    border: 1px solid #888;
+    width: 300px;
+    /*background-color: gray;*/
+}
+#submit{
+    width: 300px;
+    background-color: pink;
+    padding: 20px 20px;
+    border-radius: 5px;
+    border: 1px solid #888;
+}
+@media(max-width:576){
+ input{
+     display: block;
+ }
+}
+#submit:hover{
+    background-color: gray;
+    color:white;
+    cursor: pointer;
+}
+/*end of subscribe*/
+/*start of map*/
+
+/*****************  start of footer  ******************/
+span{
+    color: rgb(241, 120, 181);
+}
+footer h1{
+   color: rgb(241, 120, 181);
+   text-shadow: rgb(8, 8, 8) 1px 1px 3px;
+   font-family: 'lobster';
+}
+footer input{
+    outline: none;
+    border: none;
+}
+.icon ul li{
+    position: relative;
+    display: block;
+    list-style: none;
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(241, 120, 181);
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0px 5px;
+    transition: .5s;
+    box-shadow: 0 0 15px  #171515;
+    text-shadow: 0 0 5px  #171515;
+}
+.icon ul{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.icon ul li:hover{
+    font-size: 30px;
+    box-shadow: 0 0 15px rgb(241, 120, 181);
+    text-shadow: 0 0 15px rgb(241, 120, 181);
+    background-color: #171515;
+}
+@media(max-width:1200px){
+    .icon ul{
+        margin-left:300px ;
+    }
+    .last{
+        margin-top: 50px;
+    }
+}
+@media(max-width:992px){
+    .icon ul{
+        margin-left:180px ;
+    }
+}
+@media(max-width:768px){
+    .icon ul{
+        margin-left:90px ;
+    }
+}
+@media(max-width:576px){
+    .icon ul{
+        margin-left:30px ;
+    }
+}
+/*.............................end of footer....................*/
+

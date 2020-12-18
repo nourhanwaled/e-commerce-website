@@ -1,0 +1,1407 @@
+:root{
+    --main-color:tomato;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    height: 200px;
+    overflow-x: hidden;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*start setting box*/
+.setting-box{
+    position: fixed;
+    top: 0px;
+    left: -200px;
+    background-color: rgba(0,0,0,0.8);
+    width: 200px;
+    z-index: 1000;
+    min-height: 100vh;
+    transition: .3s;
+    border: 1px solid #EEE;
+}
+.setting-box.open{
+left: 0px;
+}
+.setting-box .toggle{
+    position: absolute;
+    right: -30px;
+    top: 100px;
+    background-color: white;
+    padding: 8px 0px;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.setting-container{
+    margin-top: 20px;
+   margin-left: 13px;
+   margin-bottom: 20px;
+}
+.setting-container .option-box{
+    text-align: center;
+    background-color: #EEE;
+    width: 160px;
+    margin: 10px;
+
+
+}
+.setting-container .option-box h4{
+    color: #666;
+    font-size: 13px;
+}
+.setting-container .option-box .yes,.setting-container .option-box .no{
+    width: 50px;
+    background-color:var(--main-color);
+    color: white;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    opacity: .5;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.setting-box .option-box span.active{
+    opacity: 1;
+}
+.setting-container .option-box ul{
+    text-align: center;
+    list-style: none;
+    padding: 0px;
+    margin: 10px 0px 0px;
+}
+.setting-container .option-box ul li{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #333;
+    cursor: pointer;
+    opacity: .5;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border: 3px solid #EEE;
+}
+.setting-container .option-box ul li.active{
+    opacity: 1;
+    border-color: white;
+}
+.setting-container .option-box ul li:nth-child(1){
+    background-color: tomato;
+}
+.setting-container .option-box ul li:nth-child(2){
+    background-color: aqua;
+}
+.setting-container .option-box ul li:nth-child(3){
+    background-color: yellow;
+}
+.setting-container .option-box ul li:nth-child(4){
+    background-color: crimson;
+}
+.setting-container .option-box ul li:nth-child(5){
+    background-color: blue;
+}
+.setting-box .reset-option{
+    background-color: #f4433f;
+    border: none;
+    width: 160px;
+    margin: 10px auto;
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+/*end setting box*/
+/*.........................................................*/
+.landing{
+    min-height: 100vh;
+    background-image: url('../images/home-bg1.jpeg');
+    background-size: cover;
+    position: relative;
+    margin-bottom: 100px;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 01s ease-in-out;
+    background-position: center;
+    background-attachment: fixed;
+    background-size:1600px 740px;
+    background-repeat: no-repeat;
+}
+.overlay{
+    background-color: rgba(0,0,0,.5);
+}
+.landing .overlay{
+   /* background-color: rgba(0,0,0,.6);*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+.landing .container{
+    position: relative;
+    z-index: 10000;
+}
+.header{
+    position: relative;
+    z-index: 2;
+    color: pink;
+    background-color:rgba(1,1,1,0.8);
+    padding: 10px;
+    display: flex;
+    height: 90px;
+}
+.header .logo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 70px;
+    margin-left: 25px;
+    margin-top: 2px;  
+}
+/*.........................*/
+.header .links-container{
+    width: 70%;
+    margin: auto;
+}
+.header .links-container .links{
+/*display: flex;*/
+padding: 20px;
+list-style: none;
+text-align: left;
+width: 100%;
+display: inline-flex;
+}
+.header .links-container .links li {
+    display: inline;
+    text-align: center;
+}
+.header .links-container .links li a{
+    padding-left: 20px;
+}
+.drobdown ul{
+    margin-top: 33.8px;
+    margin-left: -15px;
+    text-align: center;
+}
+.drobdown ul li a{
+    display: none;
+    padding-bottom: 20px;
+}
+.myul .links li:hover .drobdown li a{
+    display: block;
+    padding-bottom: 20px;
+}
+/*
+.header .links-container .links li .fa-user-alt{
+    margin-left: 150px;
+    font-size: 25px;
+    margin-top: 3px;
+    color: white;
+}*/
+.header .fa-shopping-cart{
+  font-size: 25px;
+  float: right;
+  color: white;
+  margin-top: 0px;
+position: absolute;
+top: 30%;
+right: 10%;
+}
+/*.........logout..........*/
+.header .logout{
+    width: 100px;
+    background-color: white;
+    padding: 2px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 30%;
+    right: 2%;
+}
+.header .logout:hover{
+    width: 100px;
+}
+.header .logout a{
+    color: rgba(0,0,0,0.8);
+ text-decoration: none;
+}
+.header .logout a:hover{
+    text-decoration: none;
+    color: pink;
+}
+/*...........**...........*/
+.header .links-container{
+    text-align: right;
+}
+.header .links-container .links li a{
+    color: white;
+    font-size: 18px;
+    padding-right: 30px;
+    text-decoration: none;
+}
+.header .links-container .links li a:hover{
+    color: deeppink;
+}
+
+/*..............................................*/
+.header{
+    position: relative;
+}
+.header .toogle-menu{
+    background: none;
+    right: 15%;
+    border: none;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+    position: relative;
+    position: absolute;
+    top: 40%;
+}
+.header .toogle-menu.menu-active::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    position: absolute;
+    bottom: -16px;
+    left: 10px;
+    border-color: transparent transparent white transparent;
+}
+.header .toogle-menu:focus{
+    outline: none;
+}
+.header .toogle-menu span{
+    display: block;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 4px;
+}
+
+.intro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+    width: 95%;
+}
+.intro h1{
+    font-size: 34px;
+    margin: 0px 0px 12px;
+}
+.intro h1 span{
+color: var(--main-color);
+}
+
+.intro p{
+    line-height: 1.6;
+    font-size: 20px;
+    margin: 0px;
+}
+
+@media(min-width:1350px){
+    .drobdown ul{
+        margin-top: 33.8px;
+        margin-left: -15px;
+        text-align: center;
+        background-color: rgba(0,0,0,0.8);
+    }
+}
+@media(max-width:1100px){
+    .header .fa-shopping-cart{
+        float: right;
+        margin-right: 90px;
+        font-size: 20px;
+        color: white;
+        position: absolute;
+        right:5%;
+        top: 40%;
+    }
+    .header .links-container .links li a{
+        display: none;
+    }
+    .fa-caret-square-down{
+        display: none;
+    }
+    .drobdown ul li a{
+        display: none;
+      /* background-color: white;*/
+        padding-bottom: 20px;
+    }
+    .drobdown ul{
+        margin-top: 0px;
+    }
+    .header ul li{
+        display: block;
+        text-align: center;
+    }
+    .header ul .links.open{
+        display: block;
+        background-color: rgba(1, 1, 1, .8);
+        position: absolute;
+        padding: 20px;
+        left: 0;
+        top: 85px;
+        width: 100%;
+        border-radius: 4px;
+        z-index: 100000;
+    }
+    
+    .header ul .links.open li a{ 
+       color: white;
+        font-weight: bold;
+        display: block;
+        padding-bottom: 20px;
+    }
+    .header .toogle-menu{
+        display:inline-block;
+    }
+}
+  @media(max-width:1150px){
+    .header .toogle-menu{
+        position: absolute;
+        right: 20%;
+    }
+}
+@media(max-width:1000px){
+    .header .toogle-menu{
+         position :absolute;
+        right: 22%;
+    }
+}
+    @media(max-width:775px){
+        .header .toogle-menu{
+             position :absolute;
+            right: 26%;
+        }
+    }
+        @media(max-width:557px){
+            .header .toogle-menu{
+                 position: absolute;
+                right: 30%;
+            }
+}
+/*end landing page*/
+  /*start of shopes*/
+.shop{
+    justify-content: space-around;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    transition-delay: 1s;
+    width: 100%;
+}
+.shops h1{
+text-align: center;
+font-family: 'lobster';
+}
+.shops p{
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+}
+.shop .box{
+    position: relative;
+    overflow: hidden;
+    width: calc(100% /4);
+    float: left;
+    margin-bottom: 50px;
+   /* width: calc(100% / 4);
+     float: left;
+    text-align: center;
+    overflow: hidden;*/
+}
+.shop .box img{
+    width: 250px;
+    height: 300px;
+    transition: 0.5s;
+}
+.shop .box:hover img{
+    width: 250px;
+    height: 300px;
+    transform: scale(1.1);
+}
+.shop .box .detail .fa-eye{
+    position: absolute;
+    right: -15%;
+    transition: 0.8;
+    transition: 0.3s;
+    color: pink;
+    top: 40%;
+    font-size: 30px;
+}
+.shop .box:hover .detail .fa-eye{
+    right: 5%;
+    top: 40%;
+    font-size: 30px;
+}
+.shop .box .detail .fa-shopping-bag{
+    position: absolute;
+    transition: 0.5s;
+    right: -15%;
+    top: 60%;
+    font-size: 30px;
+}
+.shop .box:hover .detail .fa-shopping-bag{
+    position: absolute;
+    right: 5%;
+    color: pink;
+    top: 60%;
+    font-size: 30px;
+}
+.shop .box .content .buy{
+    position: absolute;
+    background-color:rgba(1, 1, 1, 0.8);
+    width: 93%;
+    bottom: -50px;
+    transition: .5s;
+    cursor: pointer;
+   font-weight: bold;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+   padding-top: 10px;
+    font-size: 20px;
+}
+.shop .box:hover .content .buy{
+    position: absolute;
+    background-color:pink;
+    width:98%;
+    bottom: 0px;
+    left: 0px;
+    color:rgba(1, 1, 1, 0.8);
+    height: 50px;
+    padding-top: 10px;
+    font-size: 20px;
+}
+.shop .box .content .buy:hover{
+    position: absolute;
+    width: 97.5%;
+    bottom: 0px;
+    left: 0px;
+    color: rgba(1, 1, 1, .8);
+    background-color:rgba(1, 1, 1, 0.8);
+    height: 50px;
+    padding-top: 10px;
+    font-size: 20px;
+    color: white;
+}
+@media(max-width:991px){
+    .shop .box{
+        width: calc(100% /2);
+        margin: auto;
+    } 
+    .shop .box img{
+        width: 250px;
+        height: 300px;
+        transition: 0.5s;
+    }
+    .shop .box:hover img{
+        width: 250px;
+        height: 300px;
+        transform: scale(1.1);
+    }
+    .shop .box .detail .fa-eye{
+        position: absolute;
+        right: -15%;
+        transition: 0.8;
+        transition: 0.3s;
+        color: pink;
+        top: 40%;
+        font-size: 30px;
+    }
+    .shop .box:hover .detail .fa-eye{
+        right: 15%;
+        top: 40%;
+        font-size: 30px;
+    }
+    .shop .box .detail .fa-shopping-bag{
+        position: absolute;
+        transition: 0.5s;
+        right: -15%;
+        top: 60%;
+        font-size: 30px;
+    }
+    .shop .box:hover .detail .fa-shopping-bag{
+        position: absolute;
+        right: 15%;
+        color: pink;
+        top: 60%;
+        font-size: 30px;
+    }
+    .shop .box .content .buy{
+        position: absolute;
+        background-color:rgba(1, 1, 1, 0.8);
+        width: 73%;
+        bottom: -50px;
+        transition: .5s;
+        cursor: pointer;
+       font-weight: bold;
+        left: 12%;
+        right: 0px;
+        height: 50px;
+       padding-top: 10px;
+        font-size: 20px;
+    }
+    .shop .box:hover .content .buy{
+        position: absolute;
+        background-color:pink;
+        width:80%;
+        bottom: 0px;
+        left: 8.5%;
+        color:rgba(1, 1, 1, 0.8);
+        height: 50px;
+        padding-top: 10px;
+        font-size: 20px;
+    }
+    .shop .box .content .buy:hover{
+        position: absolute;
+        width: 79.5%;
+        bottom: 0px;
+        left: 9%;
+        color: rgba(1, 1, 1, .8);
+        background-color:rgba(1, 1, 1, 0.8);
+        height: 50px;
+        padding-top: 10px;
+        font-size: 20px;
+        color: white;
+    }
+}
+@media(max-width:1200px){
+    .shop .box{
+        width: calc(100% /2);
+        margin: auto;
+    } 
+    .shop .box img{
+        width: 250px;
+        height: 300px;
+        transition: 0.5s;
+    }
+    .shop .box:hover img{
+        width: 250px;
+        height: 300px;
+        transform: scale(1.1);
+    }
+    .shop .box .detail .fa-eye{
+        position: absolute;
+        right: -15%;
+        transition: 0.8;
+        transition: 0.3s;
+        color: pink;
+        top: 40%;
+        font-size: 30px;
+    }
+    .shop .box:hover .detail .fa-eye{
+        right: 25%;
+        top: 40%;
+        font-size: 30px;
+    }
+    .shop .box .detail .fa-shopping-bag{
+        position: absolute;
+        transition: 0.5s;
+        right: -15%;
+        top: 60%;
+        font-size: 30px;
+    }
+    .shop .box:hover .detail .fa-shopping-bag{
+        position: absolute;
+        right: 25%;
+        color: pink;
+        top: 60%;
+        font-size: 30px;
+    }
+    .shop .box .content .buy{
+        position: absolute;
+        background-color:rgba(1, 1, 1, 0.8);
+        width: 53%;
+        bottom: -50px;
+        transition: .5s;
+        cursor: pointer;
+       font-weight: bold;
+        left: 22%;
+        right: 0px;
+        height: 50px;
+       padding-top: 10px;
+        font-size: 20px;
+    }
+    .shop .box:hover .content .buy{
+        position: absolute;
+        background-color:pink;
+        width:59.7%;
+        bottom: 0px;
+        left: 19%;
+        color:rgba(1, 1, 1, 0.8);
+        height: 50px;
+        padding-top: 10px;
+        font-size: 20px;
+    }
+    .shop .box .content .buy:hover{
+        position: absolute;
+        width: 59.7%;
+        bottom: 0px;
+        left: 19%;
+        color: rgba(1, 1, 1, .8);
+        background-color:rgba(1, 1, 1, 0.8);
+        height: 50px;
+        padding-top: 10px;
+        font-size: 20px;
+        color: white;
+    }
+}
+@media(max-width:990px){
+    .shop .box{
+        width: calc(100% /2);
+        margin: auto;
+    } 
+    .shop .box img{
+        width: 250px;
+        height: 300px;
+        transition: 0.5s;
+    }
+    .shop .box:hover img{
+        width: 250px;
+        height: 300px;
+        transform: scale(1.1);
+    }
+    .shop .box .detail .fa-eye{
+        position: absolute;
+        right: -15%;
+        transition: 0.8;
+        transition: 0.3s;
+        color: pink;
+        top: 40%;
+        font-size: 30px;
+    }
+    .shop .box:hover .detail .fa-eye{
+        right: 15%;
+        top: 40%;
+        font-size: 30px;
+    }
+    .shop .box .detail .fa-shopping-bag{
+        position: absolute;
+        transition: 0.5s;
+        right: -15%;
+        top: 60%;
+        font-size: 30px;
+    }
+    .shop .box:hover .detail .fa-shopping-bag{
+        position: absolute;
+        right: 15%;
+        color: pink;
+        top: 60%;
+        font-size: 30px;
+    }
+    .shop .box .content .buy{
+        position: absolute;
+        background-color:rgba(1, 1, 1, 0.8);
+        width: 72%;
+        bottom: -50px;
+        transition: .5s;
+        cursor: pointer;
+       font-weight: bold;
+        left: 13%;
+        right: 0px;
+        height: 50px;
+       padding-top: 10px;
+        font-size: 20px;
+    }
+    .shop .box:hover .content .buy{
+        position: absolute;
+        background-color:pink;
+        width:80%;
+        bottom: 0px;
+        left: 8.5%;
+        color:rgba(1, 1, 1, 0.8);
+        height: 50px;
+        padding-top: 10px;
+        font-size: 20px;
+    }
+    .shop .box .content .buy:hover{
+        position: absolute;
+        width: 80%;
+        bottom: 0px;
+        left: 8.5%;
+        color: rgba(1, 1, 1, .8);
+        background-color:rgba(1, 1, 1, 0.8);
+        height: 50px;
+        padding-top: 10px;
+        font-size: 20px;
+        color: white;
+    }
+}
+@media(max-width:768px){
+    .shop .box{
+        width: 100%;
+        margin: auto;
+    } 
+    .shop .box img{
+        width: 500px;
+        height: 300px;
+        transition: 0.5s;
+    }
+    .shop .box:hover img{
+        width: 500px;
+        height: 300px;
+        transform: scale(1.1);
+    }
+    .shop .box .detail .fa-eye{
+        position: absolute;
+        right: -15%;
+        transition: 0.8;
+        transition: 0.3s;
+        color: pink;
+        top: 40%;
+        font-size: 30px;
+    }
+    .shop .box:hover .detail .fa-eye{
+        right: 15%;
+        top: 40%;
+        font-size: 30px;
+    }
+    .shop .box .detail .fa-shopping-bag{
+        position: absolute;
+        transition: 0.5s;
+        right: -15%;
+        top: 60%;
+        font-size: 30px;
+    }
+    .shop .box:hover .detail .fa-shopping-bag{
+        position: absolute;
+        right: 15%;
+        color: pink;
+        top: 60%;
+        font-size: 30px;
+    }
+    .shop .box .content .buy{
+        position: absolute;
+        background-color:rgba(1, 1, 1, 0.8);
+        width: 100%;
+        bottom: -50px;
+        transition: .5s;
+        cursor: pointer;
+       font-weight: bold;
+        left: 0%;
+        right: 0px;
+        height: 50px;
+       padding-top: 10px;
+        font-size: 20px;
+    }
+    .shop .box:hover .content .buy{
+        position: absolute;
+        background-color:pink;
+        width:100%;
+        bottom: 0px;
+        left: 0%;
+        color:rgba(1, 1, 1, 0.8);
+        height: 50px;
+        padding-top: 10px;
+        font-size: 20px;
+    }
+    .shop .box .content .buy:hover{
+        position: absolute;
+        width: 90%;
+        bottom: 0px;
+        left: 0%;
+        color: rgba(1, 1, 1, .8);
+        background-color:rgba(1, 1, 1, 0.8);
+        height: 50px;
+        padding-top: 10px;
+        font-size: 20px;
+        color: white;
+    }
+}
+/*end of boxes*/
+/*start of rings*/
+.images{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.rings{
+    margin-top: 100px;
+}
+.rings h1{
+    font-family: 'lobster';
+}
+.images img{
+    width: 280px;
+    height: 300px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+.carousel-indicators{
+    position: absolute;
+    right: 0px;
+    color: rgba(1, 1, 1, 0.8);
+    bottom: -60px!important;
+}
+.carousel-indicators li{
+    background-color: rgba(1, 1, 1, 0.8)!important;
+}
+/*................................................................*/
+/*start of counter*/
+.counter{
+    margin-top: 100px;
+    background-image: url(../images/pic68.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    color: white;
+}
+.counter h1{
+    font-family: 'lobster';
+    text-align: center;
+    color: black;
+    padding-top: 50px;
+    font-size: 50px;
+}
+.counter p{
+    text-align: center;
+    font-size: 18px;
+    width: 50%;
+    margin: auto;
+    color: black;
+    margin-bottom: 30px;
+}
+.counter .counts{
+/*display: flex;*/
+width: 80%;
+justify-content: space-around;
+text-align: center;
+position: relative;
+margin-bottom: 20px;
+transition-delay: 1s;
+width: 100%;
+}
+
+.counter .counts .calcs{
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: calc(100% /4);
+    margin-bottom: 50px;
+   /* background-color: rgba(1, 1, 1, 0.8);*/
+    height: 250px;
+    border-radius: 3px;
+}
+.counter .counts .calc{
+    background-color: rgba(1, 1, 1, .8);
+    width: 200px;
+    height: 280px;
+    margin: auto;
+}
+.counter .counts img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.counter .counts h2{
+    font-family: 'lobster';
+    margin-bottom: -2px;
+}
+.counter .counts .p1{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+@media(max-width:1200px){
+    .counter .counts .calcs{
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        width: calc(100% /2);
+        float: left;
+        margin: auto;
+        margin-bottom: 50px;
+        height: 250px;
+        border-radius: 3px;
+    } 
+    .counter .counts .calc{
+        width: 300px;
+        margin: auto;
+    }
+    .counter .counts img{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .counter{
+height: 850px;
+    }
+}
+@media(max-width:768px){
+    .counter .counts .calcs{
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        width: calc(100% /2);
+        float: left;
+        margin: auto;
+        margin-bottom: 50px;
+        height: 250px;
+        border-radius: 3px;
+    } 
+    .counter .counts .calc{
+        width: 200px;
+        margin: auto;
+    }
+    .counter .counts img{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .counter{
+height: 900px;
+    }
+}
+
+/*end of counter*/
+/*............................................................................*/
+/*start of Earring*/
+.earring{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+@media(max-width:576px){
+    .earring{
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 30px;
+    }  
+}
+.earring h1{
+    margin-top: 100px;
+    font-family: 'lobster';
+    text-align: center;
+    margin-bottom: 30px;
+}
+.earring p{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.earring .card{
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background-color: pink;
+    margin: 30px 10px; 
+    padding: 20px 15px; 
+    display: flex;  
+    flex-direction: column;
+    box-shadow: 0px 0.5px 200px rgba(1, 1, 1, 0.2);
+    transition: 1s ease-in-out;
+}
+.earring .card:hover{
+    height: 500px;
+}
+.earring .card .imbox{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 6px;
+}
+.earring .card .imbox img{
+    width: 100%;
+    border-radius: 4px;
+    height: 225px;
+}
+.earring .card .content{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: rgba(1, 1, 1, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+.earring .card:hover .content{
+    opacity: 1;
+    visibility: visible;
+    margin-top: -50px;
+    transition-delay: 0.3s;
+}
+.earring .card .content button{
+    width: 150px;
+    height: 30px;
+    padding: 3px 7px 5px;
+    margin-top: -10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(1, 1, 1, 0.8);
+    color: pink;
+}
+.earring .card .content button:hover{
+    color: white;
+}
+/*end of Earring*/
+
+
+
+
+/*end of rings*/
+/*start of medal*/
+.medal{
+    position: relative;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+    transition-delay: 1s;
+    margin: auto;
+}
+@media(max-width:1500px){
+    .medal{
+        position: relative;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px;
+        transition-delay: 1s;
+        margin: auto;
+    }   
+}
+.medal .card{
+    position: relative;
+    height: 250px;
+    background-color: white;
+    display: flex;
+    width: 45%;
+    margin: 20px 0px;
+}
+.medal .card .inbox{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+.medal .card:hover .inbox{
+width: 150px;
+height: 150px;
+left: -75px;
+top:20%;
+transition: 0.5s ease-in-out;
+}
+.medal .card .inbox:hover{
+content: attr(data-text);
+position: absolute;
+left: 0px;
+bottom: 0px;
+width: 100%;
+text-align: center;
+font-size: 18px;
+font-weight: bold;
+}
+.medal .card .inbox img{
+max-width: 100px;
+transition: 0.5s ease-in-out;
+}
+.medal .card:hover .inbox img{
+max-width: 75px;
+transition: 0.5s ease-in-out;
+}
+.medal .card .content{
+    position: absolute;
+    right: 0px;
+    width: calc(100% -75px);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.medal h1{
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-family: 'lobster';
+}
+.medal p{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.medal .card .content h3{
+    margin-bottom: 20px;
+  position: absolute;
+  left: 45%;
+  top: 15%;
+    font-size: 24px;
+    font-family: 'lobster';
+}
+.medal .card .content p{
+    margin-left: 68px;
+    margin-top: -10px;
+}
+.medal .card .content .icon{
+    color: darkorange;
+    position: absolute;
+    left: 45%;
+    top: 55%;
+}
+.medal .card .content button{
+    display: inline-block;
+    margin-top: 20px;
+    padding:5px 10px;
+   position: absolute;
+   border: none;
+   left: 40%;
+   width: 150px;
+   color: rgba(1, 1, 1, 0.8);
+    background-color: pink;
+}
+
+.medal .card .content button:hover{
+    color: pink;
+    background-color: rgba(1, 1, 1, .8);
+    cursor: pointer;
+}
+@media(max-width:992px){
+    .medal{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .medal .card{
+        width: 400px;
+    }
+}
+/*end of medal*/
+/*start of geo*/
+.gou{
+    margin-top: 100px;
+}
+
+.Gouache
+{
+    width: 100%;
+    margin:40px auto -50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.gou h1{
+    text-align: center;
+    font-family: 'lobster';
+}
+.gou p{
+    text-align: center;
+   font-family: sans-serif;
+}
+.Gouache .box
+{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+.Gouache .box .images
+{
+    position: relative;
+    overflow: hidden;
+}
+.Gouache .box .images img
+{
+    width: 300px;
+    height: 300px;
+ border-radius: 50%;
+}
+.Gouache .box .detail{
+    position: absolute;
+    top: 16%;
+    left: 16%;
+    bottom: 2%;
+    right: 2%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.5);
+    transform: scalex(0);
+    transition: .5s;
+}
+.Gouache .box:hover .detail{
+    transform: scaleY(1);
+}
+.Gouache .box .detail button{
+    display: none;
+    }
+.Gouache .box:hover .detail button{
+width: 130px;
+height: 40px;
+background-color: pink;
+border-radius: 20px;
+position: absolute;
+top: 70%;
+left: 50%;
+transform: translate(-50%,-50%);
+display: block;
+}
+.Gouache .box .detail h1{
+    padding-top: 28px;
+    color: white;
+}
+.Gouache .box .detail i{
+  margin-left: 23px;
+}
+.Gouache .box .detail .fa-star{
+  color: darkorange;
+}
+.Gouache .box .detail h4{
+   color: white;
+   margin-left: 90px; 
+   font-family: 'lobster';
+}
+/*****************  start of footer  ******************/
+span{
+    color: rgb(241, 120, 181);
+}
+footer{
+    height: 400px;
+}
+footer h1{
+   color: rgb(241, 120, 181);
+   text-shadow: rgb(8, 8, 8) 1px 1px 3px;
+   font-family: 'lobster';
+}
+footer input{
+    outline: none;
+    border: none;
+}
+.icon ul li{
+    position: relative;
+    display: block;
+    list-style: none;
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(241, 120, 181);
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0px 5px;
+    transition: .5s;
+    box-shadow: 0 0 15px  #171515;
+    text-shadow: 0 0 5px  #171515;
+}
+.icon ul{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.icon ul li:hover{
+    font-size: 30px;
+    box-shadow: 0 0 15px rgb(241, 120, 181);
+    text-shadow: 0 0 15px rgb(241, 120, 181);
+    background-color: #171515;
+}
+@media(max-width:1200px){
+    .icon ul{
+        margin-left:300px ;
+    }
+    .last{
+        margin-top: 50px;
+    }
+}
+@media(max-width:992px){
+    .icon ul{
+        margin-left:180px ;
+    }
+}
+@media(max-width:768px){
+    .icon ul{
+        margin-left:90px ;
+    }
+}
+@media(max-width:576px){
+    .icon ul{
+        margin-left:30px ;
+    }
+}
+
+.copyright{
+    text-align: center;
+  margin-top: -150px;
+}
+@media(max-width:1200px){
+    footer{
+        height: 600px;
+    }
+    .copyright{
+        margin-top:-100px;
+        text-align: center;
+    }
+    @media(max-width:991px){
+        footer{
+            height: 800px;
+        }
+        .copyright{
+            margin-top:-100px;
+            text-align: center;
+        }
+    }
+
+
+}
+/*.............................end of footer....................*/
+
+@media(min-width:768px){
+    .container{
+        max-width: 720px;
+    }
+}
+    /*meadia for desctop devices*/
+@media(min-width:992px){
+    .container{
+        max-width: 960px;
+    }
+    }
+    /*meadia for large devices*/
+    .menu-active{
+        display: block;
+            }
+@media(min-width:1200px){
+    .container{
+        max-width: 1140px;
+    }
+    }
